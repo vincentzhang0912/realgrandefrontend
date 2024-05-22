@@ -32,7 +32,7 @@ function App() {
 
 
       //read from backend server
-      let response = await axios.get("http://localhost:5000/api/");
+      let response = await axios.get(process.env.REACT_APP_BACKEND_URL);
       let data = response.data;//backend return object,so not response.json()
 
 
