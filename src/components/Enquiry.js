@@ -29,7 +29,7 @@ const Enquiry = (props) => {
         try{
             let response = await axios.post(process.env.REACT_APP_BACKEND_URL+'register',{...enqObj})
             if(response.status == 200) {
-                console.log(response);
+                // console.log(response);
                 setSubmittedEnq(true)
             }
             else {

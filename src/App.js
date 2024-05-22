@@ -36,7 +36,7 @@ function App() {
       let data = response.data;//backend return object,so not response.json()
 
 
-      console.log(data);
+      // console.log(data);
       setHousesData(data);
     }
     fetchdata();

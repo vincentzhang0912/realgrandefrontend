@@ -5,7 +5,7 @@ const SearchResults = (props) => {
     let paramsObj = useParams();
     // get all houses, filter them by the county and store in array in state
     let filteredHousesArray =  props.allhouses.filter((house) => (house.county === paramsObj.county));
-    console.log(filteredHousesArray);
+    // console.log(filteredHousesArray);
     return (  
         <div className="row">
             <h5> Search results for {paramsObj.county}</h5>

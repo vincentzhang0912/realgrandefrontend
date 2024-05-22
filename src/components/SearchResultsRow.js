@@ -6,7 +6,7 @@ const SearchResultsRow = (props) => {
 
     let navigate = useNavigate();
     let clickHandler = () => {
-        console.log("clicked row ");
+        // console.log("clicked row ");
         navigate('/searchedhouse',{state:{searchedHouse:props.filteredHouse }});
     }
 

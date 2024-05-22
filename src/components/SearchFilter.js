@@ -3,18 +3,18 @@ const SearchFilter = (props) => {
     let navigate = useNavigate();
     /*get unique counties and keep them ready to be mapped in return*/
     //get all houses
-    console.log(props.allhouses);
+    // console.log(props.allhouses);
     // get all counties
     let countyArrayWithDuplicates = props.allhouses.map( elem => elem.county);
-    console.log(countyArrayWithDuplicates);
+    // console.log(countyArrayWithDuplicates);
     //remove duplicates from an array using set and convert it back to array
     let distinctCountiesArr = Array.from( new Set(countyArrayWithDuplicates))
-    console.log(distinctCountiesArr);
+    // console.log(distinctCountiesArr);
 
     // event handling , synthetic event e
     let changeCountyHandler = (e) => {
-        // console.log(" county picked/changed");
-        console.log(e.target.value);// from event get target (the HTML Element) and get its value
+        // // console.log(" county picked/changed");
+        // console.log(e.target.value);// from event get target (the HTML Element) and get its value
         let county = e.target.value;
         navigate('searchresults/'+county);
     }
@@ -28,7 +28,7 @@ const SearchFilter = (props) => {
                     id=""
                     onChange={changeCountyHandler}
                 >
-                    <option selected>Search By County</option>
+                    <option >Search By County</option>
                     {
                         distinctCountiesArr.map( (elem) => {
                            return <option key= {elem} value={elem}>{elem}</option>

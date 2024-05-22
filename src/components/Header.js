@@ -8,7 +8,7 @@ const Header = () => {
 
 
     let logoutHandler = () =>{
-        console.log("logging out");
+        // console.log("logging out");
         sessionStorage.clear();
         navigate('/')        
     }

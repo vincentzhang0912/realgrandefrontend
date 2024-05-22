@@ -7,7 +7,7 @@ const SearchedHouse = () => {
 
 
     let loca = useLocation();
-    console.log(loca.state.searchedHouse);
+    // console.log(loca.state.searchedHouse);
 
 
     return (
