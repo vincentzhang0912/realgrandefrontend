@@ -38,10 +38,10 @@ const Login = () => {
         //get the data from the fields
         //talk to middleware, send the email and password and make a post request
         // using axios
-        console.log("clicked submit");
+        // console.log("clicked submit");
         try{
         let response = await axios.post(process.env.REACT_APP_BACKEND_URL+'/login',{email:lemail,password:lpassword});
-        console.log(response.data[0]);
+        // console.log(response.data[0]);
         if(response.data.length>0){
             sessionStorage.setItem("rloggedin","true");
             sessionStorage.setItem("remail",response.data[0].email);
@@ -75,19 +75,19 @@ const Login = () => {
             </div>
         </div>  
  
- {
-    //  conditional rendering using ternary
-    (incorrectDetails)
-    ?
-        <div class="row justify-content-center mt-1">
-            <div class="col-sm-5 mb-3 text-info">
-             Sorry, login credentials are incorrect.Please try again.
-            </div>
-        </div>
-    :
-    <> </>
- }
-                 
+        {
+            //  conditional rendering using ternary
+            (incorrectDetails)
+            ?
+                <div class="row justify-content-center mt-1">
+                    <div class="col-sm-5 mb-3 text-info">
+                    Sorry, login credentials are incorrect.Please try again.
+                    </div>
+                </div>
+            :
+            <> </>
+        }
+                        
              
         <div class="row justify-content-center mt-1">
             <div class="col-sm-5 mb-3">
