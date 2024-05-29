@@ -18,7 +18,7 @@ function App() {
 
   let [housesData,setHousesData] = useState([]);
 
-
+  //this is for testing the trigger to Jenkins
   // get the data here, using fetch
   //async await with fetch and get json
   // console.log to check if data is correct
